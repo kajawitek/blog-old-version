@@ -5,10 +5,9 @@
         <li class="nav-item">
           <%= link_to "Blog", root_path, class:"navbar-brand" %>
         </li>
-        
         <% if author_signed_in? %>
           <li class="nav-item">
-            <%= button_to "Sign Out", destroy_author_session_path, method: :delete, class:"btn btn-outline-danger" %>
+            <%= button_to "Sign Out", destroy_author_session_path, method: :delete, data: { turbo: false }, class:"btn btn-outline-danger" %>
           </li>
         <% else %>
           <li class="nav-item">
