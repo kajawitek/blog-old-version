@@ -15,10 +15,13 @@ describe 'Author spec' do
     expect(page).to have_content 'You have signed up successfully.'
 
     click_button 'Sign Out'
+
     expect(page).to have_content 'You need to sign in or sign up before continuing.'
     fill_in 'author[email]', with: author.email
     fill_in 'author[password]', with: author.password
     click_button 'Log in'
-    expect(page).to have_content 'Signed in successfully'
+
+    expect(page).to have_button 'Sign Out'
+    # expect(page).to have_content 'Signed in successfully'
   end
 end
