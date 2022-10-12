@@ -15,6 +15,7 @@ gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
+gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
@@ -23,9 +24,13 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'net-smtp'
   gem 'nokogiri'
+  gem 'rexml'
   gem 'rspec-rails'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
+  gem 'selenium-webdriver', '~> 4.4'
+  gem 'webdrivers', '~> 5.2'
 end
 
 group :development do
