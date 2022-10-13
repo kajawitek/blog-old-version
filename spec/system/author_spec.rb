@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Author spec' do
   let!(:author) { build(:author) }
 
-  it 'registers and logs in and logs out and changes account settings' do
+  it "setups the author's account and changes account settings" do
     visit root_path
 
     click_link 'Register'
@@ -31,7 +31,6 @@ describe 'Author spec' do
     fill_in 'author[password_confirmation]', with: 'new_password'
     fill_in 'author[current_password]', with: author.password
     click_button 'Update'
-
     expect(page).to have_content 'Your account has been updated successfully.'
   end
 end
